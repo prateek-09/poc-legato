@@ -25,7 +25,6 @@ RUN ln -s /etc/nginx/sites-available/testconfig /etc/nginx/sites-enabled
 
 EXPOSE 80
 
-
 CMD ["/code/cmd.sh"]
 
 # CMD ["nginx", "-g", "daemon off;"]
