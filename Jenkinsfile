@@ -9,14 +9,14 @@ pipeline {
     stage('build') {
       steps {
           echo 'Building docker image'
-          sh 'docker build -t testing .'
+          sh 'docker build -t demoblog-image .'
       }
     }
 
     stage('Run stage') {
       steps {
           echo 'Running docker container'
-          sh 'docker run -d -p 8888:80 testing'
+          sh 'docker run -d -p 8888:80 demoblog-image'
       }
     }
 
