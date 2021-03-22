@@ -16,6 +16,7 @@ pipeline {
     stage('push stage') {
       steps {
           echo 'Running docker container'
+          sh 'docker login --username=prateekjourney --password=Prateek@123'
           sh 'docker push prateekjourney/legatopoc:firstpush'
       }
     }
