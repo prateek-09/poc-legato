@@ -9,14 +9,14 @@ pipeline {
     stage('build') {
       steps {
           echo 'Building docker image'
-          sh 'docker build -t demoblog-image .'
+          sh 'docker build -t prateekjourney/legatopoc:firstpush .'
       }
     }
 
-    stage('Run stage') {
+    stage('push stage') {
       steps {
           echo 'Running docker container'
-          sh 'docker run -d -p 8888:80 demoblog-image'
+          sh 'docker push prateekjourney/legatopoc:firstpush'
       }
     }
 
